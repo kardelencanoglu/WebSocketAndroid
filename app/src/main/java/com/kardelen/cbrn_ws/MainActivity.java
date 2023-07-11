@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         try {
-            webSocketClient = new WebSocketClientExample("ws://10.42.0.1/xip/api/device/stream", this);
+            webSocketClient = new WebSocketClientExample("ws://192.168.1.5/xip/api/device/stream", this);
         } catch (URISyntaxException e) {
             e.printStackTrace();
         }
@@ -98,7 +98,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void startWebSocket(View view) throws URISyntaxException {
         if (webSocketClient == null || !webSocketClient.isOpen()) {
-            webSocketClient = new WebSocketClientExample("ws://10.42.0.1/xip/api/device/stream", this);
+            webSocketClient = new WebSocketClientExample("ws://192.168.1.5/xip/api/device/stream", this);
             webSocketClient.connect();
             visibleCBRN();
         } else {
